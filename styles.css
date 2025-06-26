@@ -357,7 +357,6 @@ p {
 
 .form-container iframe {
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(19, 32, 52, 0.1);
     height: 500px !important;
     width: 100% !important;
 }
