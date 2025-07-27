@@ -36,6 +36,7 @@ body {
     background-color: #082055;
     overflow: hidden;
     position: relative;
+    padding: 0 60px;
 }
 
 .hero-image {
@@ -48,7 +49,7 @@ body {
 }
 
 .hero-image img {
-    max-width: 100%;
+    max-width: 90%;
     max-height: 100%;
     width: auto;
     height: auto;
@@ -95,11 +96,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 .escola-section img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    transform-origin: center;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 /* Ajustar iframe para responsividade */
@@ -280,7 +296,7 @@ iframe {
 /* Form2 Section */
 .form2-section {
     background-color: #EFF1F1;
-    padding: 60px 0;
+    padding: 30px 0;
 }
 
 .form2-container {
@@ -292,7 +308,7 @@ iframe {
 .form2-columns {
     display: flex;
     align-items: flex-start;
-    gap: 60px;
+    gap: 40px;
 }
 
 .form2-column {
@@ -303,19 +319,18 @@ iframe {
 }
 
 .titulo-form2 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .form2-column iframe {
-    min-height: 600px;
+    min-height: 500px;
     width: 100%;
 }
 
 /* Footer Styles */
 .footer {
-    background: #1e293b;
-    color: var(--white);
-    padding: 3rem 0 1rem;
+    background: #082055;
+    padding: 2rem 0;
     margin-top: auto;
 }
 
@@ -325,75 +340,33 @@ iframe {
     padding: 0 1rem;
 }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
+.footer-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
 }
 
-.footer-section .logo-text {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.footer-description {
-    color: #94a3b8;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-.footer-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--white);
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-links a {
-    color: #94a3b8;
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.footer-links a:hover {
-    color: var(--primary-color);
-}
-
-.footer-contact p {
-    color: #94a3b8;
-    margin-bottom: 0.5rem;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid #334155;
-    color: #94a3b8;
+.footer-logo-img {
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        text-align: center;
+    .footer-logos {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-logo-img {
+        max-height: 70px;
     }
 
     .hero {
         min-height: 100vh;
-        padding: 1rem;
+        padding: 1rem 30px;
     }
 
     /* Dark section responsivity */
@@ -426,19 +399,33 @@ iframe {
     .two-columns::after {
         display: none;
     }
+
+    /* Escola section responsivity */
+    .escola-section {
+        min-height: 150px;
+        padding: 0;
+    }
 }
 
 @media (max-width: 480px) {
     .hero {
-        padding: 0.5rem;
+        padding: 0.5rem 20px;
     }
 
     .footer {
-        padding: 2rem 0 1rem;
+        padding: 1.5rem 0;
     }
 
     .footer-container {
         padding: 0 0.5rem;
+    }
+
+    .footer-logos {
+        gap: 1.5rem;
+    }
+
+    .footer-logo-img {
+        max-height: 60px;
     }
 
     .dark-section {
@@ -473,11 +460,11 @@ iframe {
 
     .form2-columns {
         flex-direction: column;
-        gap: 40px;
+        gap: 30px;
     }
 
     .form2-column iframe {
-        min-height: 400px;
+        min-height: 350px;
     }
 
     .form2-container {
@@ -485,7 +472,7 @@ iframe {
     }
 
     .form2-column iframe {
-        min-height: 300px;
+        min-height: 280px;
     }
 
       .data-image {
@@ -531,6 +518,12 @@ iframe {
     .fundosas-column {
         gap: 30px;
     }
+
+    /* Escola section responsivity for small screens */
+    .escola-section {
+        min-height: 120px;
+        padding: 0;
+    }
 }
 
 /* Scroll behavior */
@@ -565,11 +558,6 @@ main {
 
 
 /* Focus styles para acessibilidade */
-.footer-links a:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-    border-radius: 2px;
-}
 
 /* Estados loading e otimizações */
 .hero-image img {
