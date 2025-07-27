@@ -1,0 +1,593 @@
+/* Reset e configurações base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary-color: #64748b;
+    --text-color: #1e293b;
+    --light-gray: #f8fafc;
+    --white: #ffffff;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --border-radius: 0.5rem;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+/* Navbar Styles - Removed */
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #082055;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.elemento-hero {
+    position: absolute;
+    top: -140px;
+    right: 0;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: 50%;
+    transform: translateX(35%);
+    z-index: 1;
+}
+
+/* Blue Section */
+.blue-section {
+    height: 260px;
+    background-color: #3775FE;
+    position: relative;
+}
+
+.section-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Escola Section */
+.escola-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.escola-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ajustar iframe para responsividade */
+iframe {
+    max-width: 100%;
+    min-height: 400px;
+}
+
+/* Data Section */
+.data-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Dark Section */
+.dark-section {
+    background-color: #082055;
+    padding: 60px 0;
+    box-sizing: border-box;
+}
+
+.dark-section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.two-columns {
+    display: flex;
+    height: 100%;
+    position: relative;
+    gap: 40px;
+}
+
+.column {
+    flex: 1;
+}
+
+.two-columns::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    width: 2px;
+    height: 100%;
+    background-color: #3775FE;
+}
+
+.data-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.formulario-img {
+    margin-bottom: 30px;
+}
+
+/* Vaga Section */
+.vaga-section {
+    background-color: #EFF1F1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.secao-vaga-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.vaga-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+}
+
+.botao-vaga {
+    margin: 0;
+}
+
+.garanta-vaga {
+    margin: 0;
+}
+
+/* Escola Info Section */
+.escola-info-section {
+    background-color: #082055;
+    padding: 60px 0;
+}
+
+.escola-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.three-columns {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.escola-column {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider-column {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.vertical-divider {
+    width: 2px;
+    height: 100%;
+    background-color: #3775FE;
+}
+
+/* Fundosas Section */
+.fundosas-section {
+    background-image: url('../images/fundosas.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.fundosas-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.fundosas-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    flex: 1;
+}
+
+.fundosas-column:nth-child(2) img {
+    max-width: 70%;
+    height: auto;
+}
+
+/* Form2 Section */
+.form2-section {
+    background-color: #EFF1F1;
+    padding: 60px 0;
+}
+
+.form2-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.form2-columns {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.form2-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-form2 {
+    margin-bottom: 30px;
+}
+
+.form2-column iframe {
+    min-height: 600px;
+    width: 100%;
+}
+
+/* Footer Styles */
+.footer {
+    background: #1e293b;
+    color: var(--white);
+    padding: 3rem 0 1rem;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section .logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.footer-description {
+    color: #94a3b8;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.footer-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-contact p {
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #334155;
+    color: #94a3b8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding: 1rem;
+    }
+
+    /* Dark section responsivity */
+    .dark-section {
+        padding: 30px 0;
+    }
+
+    .dark-section-container {
+        padding: 0 20px;
+    }
+
+    .two-columns {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .data-image {
+        margin-top: 40px;
+    }
+
+    .formulario-img {
+        margin-bottom: 20px;
+    }
+
+    /* Remover divider em mobile */
+    .two-columns::after {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 0.5rem;
+    }
+
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+
+    .footer-container {
+        padding: 0 0.5rem;
+    }
+
+    .dark-section {
+        padding: 20px 0;
+    }
+
+    .dark-section-container {
+        padding: 0 10px;
+    }
+
+    .escola-container {
+        padding: 0 10px;
+    }
+
+    .fundosas-section {
+        min-height: 300px;
+        padding: 30px 10px;
+    }
+
+    .fundosas-content {
+        gap: 30px;
+    }
+
+    .fundosas-column {
+        gap: 20px;
+    }
+
+    /* Form2 section responsivity */
+    .form2-container {
+        padding: 0 20px;
+    }
+
+    .form2-columns {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .form2-column iframe {
+        min-height: 400px;
+    }
+
+    .form2-container {
+        padding: 0 10px;
+    }
+
+    .form2-column iframe {
+        min-height: 300px;
+    }
+
+      .data-image {
+          margin-top: 30px;
+      }
+
+    .formulario-img {
+        margin-bottom: 15px;
+    }
+
+    /* Ajustar iframe em mobile */
+    iframe {
+        min-height: 300px;
+    }
+
+    /* Escola info section responsivity */
+    .escola-container {
+        padding: 0 20px;
+    }
+
+    .three-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .vertical-divider {
+        width: 80%;
+        height: 2px;
+        background-color: #3775FE;
+    }
+
+    /* Fundosas section responsivity */
+    .fundosas-section {
+        min-height: 400px;
+        padding: 40px 15px;
+    }
+
+    .fundosas-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .fundosas-column {
+        gap: 30px;
+    }
+}
+
+/* Scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Main content */
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Adicionar JavaScript inline para funcionalidade do menu mobile */
+.nav-toggle:hover {
+    cursor: pointer;
+}
+
+/* Animações suaves */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Focus styles para acessibilidade */
+.footer-links a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Estados loading e otimizações */
+.hero-image img {
+    loading: lazy;
+}
+
+/* Garantir que todas as imagens sejam responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevenir overflow horizontal */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
