@@ -164,7 +164,7 @@ body {
 /* Responsive text */
 @media (max-width: 768px) {
     .blue-section-text h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     
     .mobile-break {
@@ -174,11 +174,32 @@ body {
 
 @media (max-width: 480px) {
     .blue-section-text h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .mobile-break {
         display: inline;
+    }
+    
+    /* Increase lateral margins for all major sections on mobile */
+    .vaga-section {
+        padding: 40px 30px !important;
+    }
+    
+    .fundosas-section {
+        padding: 60px 30px !important;
+    }
+    
+    .dark-section-container {
+        padding: 0 30px !important;
+    }
+    
+    .escola-container {
+        padding: 0 30px !important;
+    }
+    
+    .form2-container {
+        padding: 0 30px !important;
     }
 }
 
@@ -301,8 +322,40 @@ iframe {
     gap: 30px;
 }
 
+.botao-vaga-link {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.botao-vaga-link:hover {
+    transform: scale(1.05);
+}
+
 .botao-vaga {
     margin: 0;
+    max-width: 650px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Botão vaga responsive */
+@media (max-width: 768px) {
+    .botao-vaga {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .botao-vaga {
+        max-width: 250px;
+    }
+    
+    .botao-vaga-link:hover {
+        transform: scale(1.02);
+    }
 }
 
 .garanta-vaga {
@@ -421,7 +474,7 @@ iframe {
 /* Footer Styles */
 .footer {
     background: #082055;
-    padding: 2rem 0;
+    padding: 4rem 0;
     margin-top: auto;
 }
 
@@ -590,7 +643,7 @@ iframe {
 
 @media (max-width: 480px) {
     .hero {
-        padding: 0.5rem 15px;
+        padding: 0.5rem 25px;
     }
 
     .hero-image {
@@ -615,7 +668,7 @@ iframe {
     }
 
     .footer {
-        padding: 1.5rem 0;
+        padding: 3rem 0;
     }
 
     .footer-container {
@@ -818,8 +871,5 @@ html, body {
         margin: 0 auto !important;
     }
 
-    /* Debugging - add background to verify media query works */
-    .hero-image {
-        background-color: rgba(255, 0, 0, 0.1) !important;
-    }
+
 }
