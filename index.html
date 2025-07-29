@@ -5,15 +5,47 @@ title: Colégio AESC - Valinhos
 
 <section class="hero">
     <img src="{{ '/images/elementohero.png' | relative_url }}" alt="Elemento Hero" class="elemento-hero" />
-    <div class="hero-image">
-        <img src="{{ '/images/hero2.webp' | relative_url }}" alt="Hero Image" />
+    <div class="hero-image" style="display: flex; flex-direction: row; gap: 80px; justify-content: center; align-items: center;">
+        <div class="hero-image-item" style="display: flex; justify-content: center; align-items: center;">
+            <img src="{{ '/images/provadebolsa.png' | relative_url }}" alt="Prova de Bolsa" style="height: 450px; object-fit: contain;" />
+        </div>
+        <div class="hero-image-item" style="display: flex; justify-content: center; align-items: center;">
+            <img src="{{ '/images/colegioaesc.png' | relative_url }}" alt="Colégio AESC" style="height: 450px; object-fit: contain;" />
+        </div>
     </div>
+
+    <!-- Mobile stacking with media query in style tag -->
+    <style>
+        @media only screen and (max-width: 768px) {
+            .hero-image {
+                flex-direction: column !important;
+                gap: 30px !important;
+                padding: 20px !important;
+            }
+            .hero-image-item {
+                width: 100% !important;
+                max-width: 450px !important;
+            }
+            .hero-image img {
+                height: 280px !important;
+                max-width: 95% !important;
+            }
+        }
+    </style>
 </section>
 
 <section class="blue-section">
-    <img src="{{ '/images/secao.png' | relative_url }}" alt="Seção 2" class="section-image" />
-    <img src="{{ '/images/descontosecao.png' | relative_url }}" alt="Desconto Seção" class="section-image" />
+    <div class="blue-section-container">
+        <img src="{{ '/images/secao.png' | relative_url }}" alt="Blue Section" />
+    </div>
+    <div class="blue-section-text">
+        <h2>
+            <span class="light">Garanta até</span><span class="mobile-break"><br></span> <span class="extrabold">30% de desconto</span><br>
+            <span class="semibold">nas mensalidades</span>
+        </h2>
+    </div>
 </section>
+
 
 <section class="escola-section">
     <img src="{{ '/images/aescescola.png' | relative_url }}" alt="AESC Escola" />
@@ -27,10 +59,23 @@ title: Colégio AESC - Valinhos
             </div>
             <div class="column">
                 <img src="{{ '/images/formulario.png' | relative_url }}" alt="Formulário" class="formulario-img" />
-                <iframe 
-                    src="https://crescer.lumnitech.com.br/forms/296" 
-                    style="height: 580px; width: 100%; border: none;">
-                </iframe>
+                
+                    <iframe 
+                    src="https://crescer.lumnitech.com.br/forms/296"
+                    id="formIframe-296"
+                    style="height: 630px; width: 100%; border: none;">
+                    </iframe>
+                    <script>
+                    const iframe = document.getElementById("formIframe-296");
+                    iframe.onload = function () {
+                        setTimeout(() => {
+                        iframe.contentWindow.postMessage(
+                            { type: "parent-url", url: window.location.href },
+                            "*"
+                        );
+                        }, 100);
+                    };
+                    </script>
             </div>
         </div>
         <div class="data-image">
@@ -86,9 +131,21 @@ title: Colégio AESC - Valinhos
             <div class="form2-column">
                 <img src="{{ '/images/tituloform2.png' | relative_url }}" alt="Título Form 2" class="titulo-form2" />
                 <iframe 
-                    src="https://crescer.lumnitech.com.br/forms/349" 
-                    style="height: 580px; width: 100%; border: none;">
-                </iframe>
+                src="https://crescer.lumnitech.com.br/forms/349"
+                id="formIframe-349"
+                style="height: 630px; width: 100%; border: none;">
+              </iframe>
+              <script>
+                const iframe = document.getElementById("formIframe-349");
+                iframe.onload = function () {
+                  setTimeout(() => {
+                    iframe.contentWindow.postMessage(
+                      { type: "parent-url", url: window.location.href },
+                      "*"
+                    );
+                  }, 100);
+                };
+              </script>
             </div>
         </div>
     </div>
